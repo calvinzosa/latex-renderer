@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Tauri App</title>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<script type="module" src="./jquery-3.7.1.min.js" defer></script>
+		
+		<script type="module" src="./mathjax.js" defer></script>
+		
+		<link rel="stylesheet" href="./mathquill.css" />
+		<script type="module" src="./mathquill.min.js" defer></script>
+		
+		<link rel="stylesheet" href="./styles.css" />
+		<script type="module" src="./main.js"></script>
+	</head>
+	<body>
+		<div id="logo">
+			<img src="./assets/LaTeX.svg" width="300">
+		</div>
+		<span id="latex-input"></span>
+		<div class="input">
+			<span>Color</span>
+			<input id="render-color" value="#ffffff" type="color" />
+			<span>Size</span>
+			<input id="size-range" type="range" value="8" min="4" max="128" step="4">
+			<span id="size-label">8px</span>
+			<br/>
+			<button id="copy-svg">Copy to clipboard as .png</button>
+			<button id="save-svg">Save to file as .svg</button>
+		</div>
+		<div id="render-container">
+			<canvas id="render" />
+		</div>
+	</body>
+</html>
